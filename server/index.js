@@ -2,7 +2,7 @@ import express  from 'express'; //module (type)
 
 const app =express();
 
-app.get('/book', async (req, res) => {
+app.get('/', async (req, res) => {
     res.send(" hello serever is ready to paly");
 })
 
