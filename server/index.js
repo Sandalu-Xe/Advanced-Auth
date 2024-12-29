@@ -11,6 +11,7 @@ dotenv.config();  // it reads the.env file and sets the environment variables.
 const app = express();
 
 
+
 app.get('/', async (req, res) => {
     res.send(" hello serever is ready to paly");
 })
