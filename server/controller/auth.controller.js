@@ -1,9 +1,9 @@
 import bcryptjs from "bcryptjs";
-
 import { User } from "../Model/user.model.js";
-
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
+
+// Signup
 export const signup = async (req, res) => {
 
 	const { email, password, name } = req.body;
@@ -58,7 +58,7 @@ export const login = async (
 }
 
 
-// 
+// logout
 export const logout = async (
     req, res, next) => {
      res.send("logout  routers")
