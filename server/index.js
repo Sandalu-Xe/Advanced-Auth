@@ -2,6 +2,7 @@
 import express  from 'express'; 
 import dotenv from "dotenv";
 import {connectDB} from '../server/DB/connectDB.js';
+import authroute from "../server/routers/auth.route.js"
 
 
 dotenv.config();  // it reads the.env file and sets the environment variables.
@@ -12,6 +13,8 @@ const app = express();
 app.get('/', async (req, res) => {
     res.send(" hello serever is ready to paly");
 })
+
+app.use("api/auth",authroute)
 
 app.listen(3000,()=>{
     connectDB();
