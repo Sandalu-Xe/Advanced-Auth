@@ -10,6 +10,7 @@ dotenv.config();  // it reads the.env file and sets the environment variables.
 
 const app  = express();
 const PORT = process.env.PORT ||5001;
+app.use(express.json()); // allows us to parse incoming requests :req.body
 
 app.get('/', async (req, res) => {
     res.send(" hello serever is ready to paly");
@@ -22,3 +23,4 @@ app.listen(PORT,()=>{
     connectDB();
     console.log("server is running on port :",PORT);
 });
+
