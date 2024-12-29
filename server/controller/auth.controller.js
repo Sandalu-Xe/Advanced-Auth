@@ -1,9 +1,10 @@
-import {  } from "../Model/user.model.js";
-import crypto from "crypto";
-import bcrypt from 'bcryptjs';
+import bcryptjs from "bcryptjs";
 
 import { User } from "../Model/user.model.js";
+
+import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 export const signup = async (req, res) => {
+    
 	const { email, password, name } = req.body;
 
 	try { 
@@ -49,11 +50,15 @@ export const signup = async (req, res) => {
 	}
 };
 
+// login
+
 export const login = async (
     req, res, next) => { 
     res.send("Login  routers")
 }
 
+
+// 
 export const logout = async (
     req, res, next) => {
      res.send("logout  routers")
