@@ -9,7 +9,7 @@ import authroutes from "./routers/auth.route.js"
 dotenv.config();  // it reads the.env file and sets the environment variables.
 
 const app  = express();
-const PORT = process.env.PORT ||5000;
+const PORT = process.env.PORT ||5001;
 
 app.get('/', async (req, res) => {
     res.send(" hello serever is ready to paly");
@@ -20,5 +20,5 @@ app.use("/api/auth",authroutes); // pass like function
 
 app.listen(PORT,()=>{
     connectDB();
-    console.log("server is running on port 3000",PORT);
+    console.log("server is running on port :",PORT);
 });
