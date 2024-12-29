@@ -1,11 +1,19 @@
-import express  from 'express'; //module (type)
+//module ( we are using type modules here)
+import express  from 'express'; 
+import dotenv from "dotenv";
+import {connectDB} from '../server/DB/connectDB.js';
 
-const app =express();
+
+dotenv.config();  // it reads the.env file and sets the environment variables.
+
+const app = express();
+
 
 app.get('/', async (req, res) => {
     res.send(" hello serever is ready to paly");
 })
 
 app.listen(3000,()=>{
+    connectDB();
     console.log("server is running on port 3000");
 });
