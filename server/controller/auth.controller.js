@@ -3,8 +3,16 @@ import bcryptjs from "bcryptjs";
 import { User } from "../Model/user.model.js";
 
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
+
+import {
+	sendPasswordResetEmail,
+	sendResetSuccessEmail,
+	sendVerificationEmail,
+	sendWelcomeEmail,
+} from "../mailtrap/emails.js";
+
 export const signup = async (req, res) => {
-    
+
 	const { email, password, name } = req.body;
 
 	try { 
@@ -41,7 +49,7 @@ export const signup = async (req, res) => {
 			success: true,
 			message: "User created successfully",
 			user: {
-				...user._doc,
+				...user._doc, 
 				password: undefined,
 			},
 		});
