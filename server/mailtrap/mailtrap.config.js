@@ -34,7 +34,7 @@ const recipients = [
 
 
 
-client
+Client
   .send({
     from: sender,
     to: recipients,

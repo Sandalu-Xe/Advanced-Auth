@@ -2,6 +2,12 @@ import bcryptjs from "bcryptjs";
 import { User } from "../Model/user.model.js";
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
+import {
+
+	sendVerificationEmail,
+
+} from "../mailtrap/emails.js";
+
 
 // Signup
 export const signup = async (req, res) => {
@@ -35,6 +41,9 @@ export const signup = async (req, res) => {
 
 		// jwt
 		generateTokenAndSetCookie(res, user._id);
+		
+		await sendVerificationEmail(user.email, verificationToken);
+
 
 
 		res.status(201).json({
@@ -63,4 +72,3 @@ export const logout = async (
     req, res, next) => {
      res.send("logout  routers")
     } 
-	
