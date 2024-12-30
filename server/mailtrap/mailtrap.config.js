@@ -34,12 +34,12 @@ const recipients = [
 
 
 
-Client
-  .send({
-    from: sender,
-    to: recipients,
-    subject: "You are awesome!",
-    html: "Congrats for sending test email with Mailtrap!",
-    category: "Integration Test",
-  })
-  .then(console.log, console.error);
+// Client
+//   .send({
+//     from: sender,
+//     to: recipients,
+//     subject: "You are awesome!",
+//     html: "Congrats for sending test email with Mailtrap!",
+//     category: "Integration Test",
+//   })
+//   .then(console.log, console.error);
