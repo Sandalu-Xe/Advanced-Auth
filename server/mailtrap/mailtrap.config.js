@@ -12,7 +12,7 @@ const ENDPOINT= process.env.MAILTRAP_ENDPOINT;
 
 const client = new MailtrapClient({
   token: TOKEN,
-  endpoint: ENDPOINT,
+//   endpoint: ENDPOINT,
 
 });
 
@@ -32,7 +32,7 @@ client
     from: sender,
     to: recipients,
     subject: "You are awesome!",
-    text: "Congrats for sending test email with Mailtrap!",
+    html: "Congrats for sending test email with Mailtrap!",
     category: "Integration Test",
   })
   .then(console.log, console.error);
