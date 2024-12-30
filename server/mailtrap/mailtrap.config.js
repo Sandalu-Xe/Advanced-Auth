@@ -1,14 +1,25 @@
-const { MailtrapClient } = require("mailtrap");
+import {MailtrapClient} from "mailtrap";
 
-const TOKEN = "701ae8d26822cb06884d41daafd5d4de";
+
+import dotenv from "dotenv";
+
+dotenv.config()
+
+const TOKEN = process.env.MAILTRAP_TOKEN;
+const ENDPOINT= process.env.MAILTRAP_ENDPOINT;
+
+// const ENDPOINT = "https://send.api.mailtrap.io/";
 
 const client = new MailtrapClient({
   token: TOKEN,
+  endpoint: ENDPOINT,
+
 });
+
 
 const sender = {
   email: "hello@demomailtrap.com",
-  name: "Mailtrap Test",
+  name: "sandalu",
 };
 const recipients = [
   {
