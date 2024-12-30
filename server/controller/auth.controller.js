@@ -5,6 +5,8 @@ import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js
 import {
 
 	sendVerificationEmail,
+	sendWelcomeEmail,
+	
 
 } from "../mailtrap/emails.js";
 
@@ -59,6 +61,9 @@ export const signup = async (req, res) => {
 	}
 };
 
+
+
+// Verify email controller
 
 export const verifyEmail = async (req, res) => {
 	const { code } = req.body;

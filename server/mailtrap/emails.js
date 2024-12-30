@@ -1,5 +1,6 @@
 import {
 	VERIFICATION_EMAIL_TEMPLATE,
+    
 } from "./emailTemplates.js";
 
 import { mailtrapClient, sender } from "./mailtrap.config.js";
