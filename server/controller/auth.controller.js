@@ -172,7 +172,7 @@ export const forgotPassword = async (req, res) => {
 	}
 };
 
-// reset password success controller  resetPasswordExpiresAt: 2024-12-31T07:21:05.787Z,
+  // reset password success controller  resetPasswordExpiresAt: 2024-12-31T07:21:05.787Z,
   //resetPasswordToken: '6f3bf552eb1b2cb90132612758353432b21bb2e2'
 
 
@@ -208,3 +208,18 @@ export const resetPassword = async (req, res) => {
 	}
 };
 
+// checAuthent 
+
+export const checkAuth = async (req, res) => {
+	try {
+		const user = await User.findById(req.userId).select("-password");
+		if (!user) {
+			return res.status(400).json({ success: false, message: "User not found" });
+		}
+
+		res.status(200).json({ success: true, user });
+	} catch (error) {
+		console.log("Error in checkAuth ", error);
+		res.status(400).json({ success: false, message: error.message });
+	}
+};
