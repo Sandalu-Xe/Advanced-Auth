@@ -1,8 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import FloatingShape from './components/FloatingShape';
 import SignUpPage from './pages/SignUpPage.jsx';
-import LoginPage from './pages/SignUpPage.jsx';
-import Home from './pages/Home.jsx';
+
 function App() {
   return (
     <div
