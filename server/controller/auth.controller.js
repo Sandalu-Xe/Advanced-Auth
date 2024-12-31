@@ -1,4 +1,5 @@
 import bcryptjs from "bcryptjs";
+import crypto from "crypto";
 import { User } from "../Model/user.model.js";
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
@@ -6,6 +7,7 @@ import {
 
 	sendVerificationEmail,
 	sendWelcomeEmail,
+	sendPasswordResetEmail
 	
 
 } from "../mailtrap/emails.js";
