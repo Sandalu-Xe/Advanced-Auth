@@ -7,7 +7,8 @@ import {
 
 	sendVerificationEmail,
 	sendWelcomeEmail,
-	sendPasswordResetEmail
+	sendPasswordResetEmail,
+	sendResetSuccessEmail
 	
 
 } from "../mailtrap/emails.js";
