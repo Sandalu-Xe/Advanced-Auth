@@ -3,7 +3,7 @@ import FloatingShape from './components/FloatingShape';
 import SignUpPage from './pages/SignUpPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import EmailVerificationPage from "./pages/EmailVerificationPage";
-
+import DashboardPage from "./pages/DashboardPage";
 function App() {
   return (
     <div
@@ -15,7 +15,7 @@ function App() {
       <FloatingShape color='bg-lime-500' size='w-32 h-32' top='40%' left='10%' delay={2} />
 
       <Routes>
-        <Route path='/' element={"home"} />
+        <Route path='/' element={<DashboardPage/>}/>
         <Route path='/signup' element={<SignUpPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/verify-email' element={<EmailVerificationPage />} />
