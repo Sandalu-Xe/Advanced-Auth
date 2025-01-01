@@ -3,9 +3,8 @@ import React from 'react'
 const SignUpPage = () => {
   return (
 	<div>
-	  signup
+	  SignUpPage
 	</div>
   )
 }
-
 export default SignUpPage

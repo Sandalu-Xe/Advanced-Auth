@@ -1,4 +1,4 @@
-const Input = ({ icon: Icon, ...props }) => {
+const Inputt = ({ icon: Icon, ...props }) => {
 	return (
 		<div className='relative mb-6'>
 			<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
@@ -11,4 +11,4 @@ const Input = ({ icon: Icon, ...props }) => {
 		</div>
 	);
 };
-export default Input;
+export default Inputt;
