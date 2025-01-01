@@ -19,6 +19,7 @@ function App() {
         <Route path='/signup' element={<SignUpPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/verify-email' element={<EmailVerificationPage />} />
+        <Route path='/verify-email' element={<EmailVerificationPage />} />
       </Routes>
     </div>
   );
