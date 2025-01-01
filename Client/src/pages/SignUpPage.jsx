@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from "react";
 import {  Lock, Mail, User } from "lucide-react";
 import { motion } from "framer-motion";
+import Input from "../components/Input";
+import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
 	const [name, setName] = useState('');
@@ -12,7 +14,6 @@ const SignUpPage = () => {
 	  e.preventDefault(); 
 	
 	}
-
 
   return (
 	
@@ -51,10 +52,16 @@ const SignUpPage = () => {
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 					/>
-					{error && <p className='text-red-500 font-semibold mt-2'>{error}</p>}
-					<PasswordStrengthMeter password={password} />
 				
 				</form>
+			</div>
+			<div className='px-8 py-4 bg-gray-900 bg-opacity-50 flex justify-center'>
+				<p className='text-sm text-gray-400'>
+					Already have an account?{" "}
+					<Link to={"/login"} className='text-green-400 hover:underline'>
+						Login
+					</Link>
+				</p>
 			</div>
 
 		</motion.div>
