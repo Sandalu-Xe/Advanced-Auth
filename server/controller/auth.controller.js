@@ -176,7 +176,7 @@ export const forgotPassword = async (req, res) => {
   //resetPasswordToken: '6f3bf552eb1b2cb90132612758353432b21bb2e2'
 
 
-// reset torken has on the console 
+// reset torken has on the console (in your terminal)
 export const resetPassword = async (req, res) => {
 	try {
 		const { token } = req.params;
