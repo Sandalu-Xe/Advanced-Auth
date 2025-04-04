@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import FloatingShape from "./components/FloatingShape";
 
+
+
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import EmailVerificationPage from "./pages/EmailVerificationPage";
@@ -14,7 +16,7 @@ import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authStore";
 import { useEffect } from "react";
 
-// protect routes that require authentication
+// protect routes that require authentication 
 const ProtectedRoute = ({ children }) => {
 	const { isAuthenticated, user } = useAuthStore();
 

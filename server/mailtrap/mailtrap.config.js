@@ -22,8 +22,6 @@ export const sender = {
   name: "sandalu",
 };
 
-
-
 // it 
 const recipients = [
   {
